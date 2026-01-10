@@ -24,9 +24,11 @@ This tool is useful when practicing DSA or Java programs where many `.class` fil
 ---
 
 ## 📂 Project Structure
-'''
+```
+
 Java-Class-Cleaner/
 │
 ├── deleteClass.java
 └── README.md
-'''
+```
+
