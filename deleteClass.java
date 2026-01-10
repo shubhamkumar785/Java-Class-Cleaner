@@ -8,8 +8,8 @@ public class deleteClass {
 
         Path baseDir = Paths.get("").toAbsolutePath();
 
-        System.out.println("📂 Folder: " + baseDir);
-        System.out.println("🔍 Searching for .class files...");
+        System.out.println("Folder: " + baseDir);
+        System.out.println("Searching for .class files...");
 
         try (Stream<Path> paths = Files.walk(baseDir)) {
 
@@ -18,16 +18,17 @@ public class deleteClass {
                     .forEach(path -> {
                         try {
                             Files.delete(path);
-                            System.out.println("✔ Deleted: " + path);
+                            System.out.println("Deleted: " + path);
                         } catch (IOException e) {
-                            System.out.println("❌ Cannot delete: " + path);
+                            System.out.println("Cannot delete: " + path);
                         }
                     });
 
-            System.out.println("✅ All .class files deleted.");
+            System.out.println("All .class files deleted.");
 
         } catch (IOException e) {
-            System.out.println("❌ Error while scanning files: " + e.getMessage());
+            System.out.println("Error while scanning files: " + e.getMessage());
         }
     }
 }
+
